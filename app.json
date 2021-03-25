@@ -23,7 +23,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package":"com.ASP.DStream",
+      "versionCode": 1.0
     },
     "web": {
       "favicon": "./assets/favicon.png"

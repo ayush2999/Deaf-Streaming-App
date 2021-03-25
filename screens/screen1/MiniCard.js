@@ -1,14 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View,Image,Dimensions,TouchableOpacity} from 'react-native';
+import {Text, View,Image,Dimensions,TouchableOpacity} from 'react-native';
 import { useNavigation,useTheme } from '@react-navigation/native';
 
 const MiniCard = (props)=>{
     const navigation = useNavigation();
     const {colors} = useTheme()
     const textcolor = colors.iconColor
+    // console.log(props);
+    
   return(
       <TouchableOpacity
-      onPress={()=>navigation.navigate("Screen3",{videoId:props.videoId,title:props.title})}
+      onPress={()=>navigation.navigate("Screen3",{videoId:props.videoId,title:props.title,data:props.data,
+        channelId:props.channelId})}
       >
     <View style={{flexDirection:"row",margin:10,marginBottom:0}}>
         <Image 
@@ -28,7 +31,7 @@ const MiniCard = (props)=>{
                ellipsizeMode="tail"
                numberOfLines={3}
                >{props.title}</Text>
-               <Text style={{fontSize:12, color:textcolor}}>{props.channel}</Text>
+               <Text style={{fontSize:12, color:textcolor,width:Dimensions.get("screen").width/2}} numberOfLines={2}>{props.channelTitle}</Text>
            </View>
     </View>
     </TouchableOpacity>
