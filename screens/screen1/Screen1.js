@@ -18,7 +18,7 @@ class Screen1 extends Component{
     this.props.navigation.navigate('Screen2',{key:item.key,title:item.title})
   }
   render(){
-    const videoPath = require('./assets/welcome.mp4');
+    const videoPath = require('../../assets/welcome.mp4');
     return (
       <SafeAreaView style={styles.container}>
         <View style = {styles.nav}>
@@ -62,12 +62,12 @@ class Screen1 extends Component{
   }
 }
 const videoList =[
-  {title:"Deaf News",source:require('./assets/1.mp4'),key:1},
-  {title:"Deaf ASL",source:require('./assets/2.mp4'),key:2},
-  {title:"Deaf Short Films",source:require('./assets/3.mp4'),key:3},
-  {title:"Deaf Entertainment",source:require('./assets/4.mp4'),key:4},
-  {title:"Deaf Food Recipes by Shikha",source:require('./assets/6.mp4'),key:6},
-  {title:"Baba Ramdev Diabetes Yoga",source:require('./assets/7.mp4'),key:7}, 
+  {title:"Deaf News",source:require('../../assets/1.mp4'),key:1},
+  {title:"Deaf ASL",source:require('../../assets/2.mp4'),key:2},
+  {title:"Deaf Short Films",source:require('../../assets/3.mp4'),key:3},
+  {title:"Deaf Entertainment",source:require('../../assets/4.mp4'),key:4},
+  {title:"Deaf Food Recipes by Shikha",source:require('../../assets/6.mp4'),key:6},
+  {title:"Baba Ramdev Diabetes Yoga",source:require('../../assets/7.mp4'),key:7}, 
 ]
 
 const styles = StyleSheet.create({
